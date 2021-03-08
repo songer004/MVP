@@ -6,7 +6,18 @@ public class App {
 	
 	public static void main(String [] args) {
 
+		
+		/************************************************
+		 * 
+		 *  1.模拟一个View
+		 * 
+		 * ************************************************/
 		LoginView loginView = new LoginView();
+		/************************************************
+		 * 
+		 *  2.模拟View的生命周期
+		 * 
+		 * ************************************************/
 		loginView.onCreate();
 		
 		try {
@@ -15,6 +26,12 @@ public class App {
 			// TODO: handle exception
 		}
 		
+
+		/************************************************
+		 * 
+		 *  3.模拟View一次点击事件
+		 * 
+		 * ************************************************/
 		loginView.doLogin();
 		
 		try {
@@ -22,6 +39,8 @@ public class App {
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
+		
+		
 		
 	}
 

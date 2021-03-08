@@ -6,12 +6,15 @@ public class LoginPresenter extends BasePresenter<LoginView, LoginModel, LoginCo
 
 	@Override
 	public LoginContrat.Presenter getContract() {
-		// TODO Auto-generated method stub
+		/************************************************
+		 * 
+		 *  -在Presenter需要和View交互的时候调用（缺点，每次都要new）
+		 * 
+		 * ************************************************/
 		return new LoginContrat.Presenter<UserInfo>() {
 
 			@Override
 			public void requestLogin(String name, String password) {
-				// TODO Auto-generated method stub
 				try {
 					System.out.println("LoginPresenter n : " + name + "  p : " + password);
 					getModel().getContract().excuteLogin(name, password);
@@ -22,7 +25,6 @@ public class LoginPresenter extends BasePresenter<LoginView, LoginModel, LoginCo
 
 			@Override
 			public void responseResult(UserInfo t) {
-				// TODO Auto-generated method stub
 				getView().getContract().handleResult(t);
 			}
 			
@@ -31,15 +33,13 @@ public class LoginPresenter extends BasePresenter<LoginView, LoginModel, LoginCo
 
 	@Override
 	public LoginModel getModel() {
-		// TODO Auto-generated method stub
+		/************************************************
+		 * 
+		 *  -在Presenter持有Model（缺点，每次都要new）
+		 * 
+		 * ************************************************/
 		return new LoginModel(this);
 	}
 
-	@Override
-	public LoginView getView() {
-		// TODO Auto-generated method stub
-		return new LoginView();
-	}
-	
 
 }

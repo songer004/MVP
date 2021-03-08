@@ -6,13 +6,22 @@ import mvp.test.LoginContrat.Model;
 public class LoginModel extends BaseModel<LoginPresenter, LoginContrat.Model>{
 
 	public LoginModel(LoginPresenter p) {
+
+		/************************************************
+		 * 
+		 *  -初始化的时候，持有Presenter的引用
+		 * 
+		 * ************************************************/
 		super(p);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public LoginContrat.Model getContract() {
-		// TODO Auto-generated method stub
+		/************************************************
+		 * 
+		 *  -在Presenter需要和Model交互的时候调用（缺点，每次都要new）
+		 * 
+		 * ************************************************/
 		return new LoginContrat.Model() {
 			
 			@Override

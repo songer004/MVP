@@ -6,6 +6,12 @@ import mvp.test.LoginContrat.View;
 public class LoginView extends BaseView<LoginPresenter, LoginContrat.View>{
 	
 	
+	/************************************************
+	 * 
+	 *  -模拟View一次点击事件
+	 *  -p 在父类的生命周期onCreate()已经初始化
+	 * 
+	 * ************************************************/
 	public void doLogin() {
 		p.getContract().requestLogin("song", "123");
 	}
@@ -13,13 +19,21 @@ public class LoginView extends BaseView<LoginPresenter, LoginContrat.View>{
 
 	@Override
 	public LoginPresenter getPresenter() {
-		// TODO Auto-generated method stub
+		/************************************************
+		 * 
+		 *  -在父类的生命周期onCreate()调用
+		 * 
+		 * ************************************************/
 		return new LoginPresenter();
 	}
 
 	@Override
 	public View getContract() {
-		// TODO Auto-generated method stub
+		/************************************************
+		 * 
+		 *  -在Presenter需要和View交互的时候调用（缺点，每次都要new）
+		 * 
+		 * ************************************************/
 		return new LoginContrat.View<UserInfo>() {
 
 			@Override
