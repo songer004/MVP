@@ -1,6 +1,7 @@
-package mvp.test.login;
+package mvp;
 
-import mvp.core.Presenter.BasePresenter;
+import mvp.base.UserInfo;
+import mvp.core.presenter.BasePresenter;
 
 public class LoginPresenter extends BasePresenter<LoginView, LoginModel, LoginContrat.Presenter>{
 

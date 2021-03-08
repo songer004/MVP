@@ -1,8 +1,8 @@
-package mvp;
+package mvp20;
 
-import mvp.test.login.LoginView;
+import mvp20.action.ActionView;
 
-public class App {
+public class TestMvp20Action {
 	
 	public static void main(String [] args) {
 		
@@ -14,7 +14,10 @@ public class App {
 		 *  -此MVP结构清晰，逻辑清晰
 		 *  
 		 *  -MVP通病，类写的有点多，每增加一个模块，要按照这模式增加多个类
-		 *  -此MVP如要在模块内新增一个新方法，需要修改多个文件，例如：增加logout功能，需要Presenter层、Model层、View层、约束层都要新增相应的代码
+		 *  -2.0每层可只用一个文件即可，但是业务如果过多，Model层将非常繁重，因为所有的处理逻辑都集中在了Model层，Presenter层只负责中转，
+		 *  -2.0也可以根据不同的业务层，定义不同的层实现，例如登录模块、Main模块等
+		 *  
+		 *  -此mvp的好处是，同一模块，新增新的功能，不用改动太多地方。只需修改Model层和View层的实现逻辑
 		 *  
 		 * ************************************************/
 		
@@ -25,7 +28,7 @@ public class App {
 		 *  1.模拟一个View，在安卓实际项目中，直接就是Activity
 		 * 
 		 * ************************************************/
-		LoginView loginView = new LoginView();
+		ActionView loginView = new ActionView();
 		/************************************************
 		 * 
 		 *  2.模拟View的生命周期
@@ -53,6 +56,17 @@ public class App {
 			// TODO: handle exception
 		}
 		
+
+		loginView.doLogout();
+		
+		try {
+			Thread.sleep(2000);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+
+		loginView.doGetList();
 		
 		
 	}

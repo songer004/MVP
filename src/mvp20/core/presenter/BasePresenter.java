@@ -1,9 +1,9 @@
-package mvp.core.presenter;
+package mvp20.core.presenter;
 
 import java.lang.ref.WeakReference;
 
-import mvp.core.model.BaseModel;
-import mvp.core.view.BaseView;
+import mvp20.core.model.BaseModel;
+import mvp20.core.view.BaseView;
 
 public abstract class BasePresenter<V extends BaseView, M extends BaseModel, CONTRACT>{
 	

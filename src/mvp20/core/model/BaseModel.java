@@ -1,6 +1,6 @@
-package mvp.core.model;
+package mvp20.core.model;
 
-import mvp.core.presenter.BasePresenter;
+import mvp20.core.presenter.BasePresenter;
 
 public abstract class BaseModel <P extends BasePresenter, CONTRACT>{
 	

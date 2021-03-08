@@ -1,7 +1,7 @@
-package mvp.core.view;
+package mvp20.core.view;
 
 import mvp.base.LifeCycleView;
-import mvp.core.presenter.BasePresenter;
+import mvp20.core.presenter.BasePresenter;
 
 /************************************************
  * 

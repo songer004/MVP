@@ -1,6 +1,4 @@
-package mvp.test.login;
-
-import mvp.core.entity.BaseEntity;
+package mvp.base;
 
 public class UserInfo extends BaseEntity{
 	

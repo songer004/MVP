@@ -1,7 +1,8 @@
-package mvp.test.login;
+package mvp;
 
+import mvp.LoginContrat.Model;
+import mvp.base.UserInfo;
 import mvp.core.model.BaseModel;
-import mvp.test.login.LoginContrat.Model;
 
 public class LoginModel extends BaseModel<LoginPresenter, LoginContrat.Model>{
 

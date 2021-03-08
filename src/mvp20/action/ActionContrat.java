@@ -1,8 +1,10 @@
-package mvp.test.login;
+package mvp20.action;
 
-import mvp.core.entity.BaseEntity;
+import java.util.Map;
 
-public interface LoginContrat {
+import mvp.base.BaseEntity;
+
+public interface ActionContrat {
 	
 	/************************************************
 	 * 
@@ -11,7 +13,7 @@ public interface LoginContrat {
 	 * ************************************************/
 	
 	public interface Model{
-		void excuteLogin(String name, String password) throws Exception;
+		void excuteAction(String actionName, Map para) throws Exception;
 	}
 	
 	
@@ -25,7 +27,7 @@ public interface LoginContrat {
 	 * ************************************************/
 	
 	public interface View<T extends BaseEntity>{
-		void handleResult(T t);
+		void handleResult(String actionName, T t);
 	}
 	
 	
@@ -42,7 +44,7 @@ public interface LoginContrat {
 		 * Presenter 层应提供View的接口
 		 * 
 		 * ************************************************/
-		void requestLogin(String name, String password);
+		void requestAction(String actionName, Map para);
 		
 		
 		
@@ -51,7 +53,7 @@ public interface LoginContrat {
 		 * Presenter 层应提供Model的接口
 		 * 
 		 * ************************************************/
-		void responseResult(T t);
+		void responseActionResult(String actionName, T t);
 		
 	}
 

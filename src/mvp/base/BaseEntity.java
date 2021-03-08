@@ -1,4 +1,4 @@
-package mvp.core.entity;
+package mvp.base;
 
 public class BaseEntity {
 	

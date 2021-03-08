@@ -1,4 +1,4 @@
-package mvp.core.view;
+package mvp.base;
 
 
 /************************************************
