@@ -1,7 +1,7 @@
-package mvp.test;
+package mvp.test.login;
 
 import mvp.core.view.BaseView;
-import mvp.test.LoginContrat.View;
+import mvp.test.login.LoginContrat.View;
 
 public class LoginView extends BaseView<LoginPresenter, LoginContrat.View>{
 	

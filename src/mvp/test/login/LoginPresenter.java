@@ -1,4 +1,4 @@
-package mvp.test;
+package mvp.test.login;
 
 import mvp.core.Presenter.BasePresenter;
 
